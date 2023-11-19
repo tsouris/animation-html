@@ -1,0 +1,119 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 30px;
+  background-image: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 0%,
+    rgba(138, 138, 138, 1) 50%,
+    rgba(4, 4, 4, 1) 100%
+  );
+
+  -webkit-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  -moz-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  /* animation */
+  animation-name: fly;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(calc(100vh / 2));
+  }
+  30% {
+    transform: translateY(calc(-100vh / 2));
+  }
+  40% {
+    transform: translateX(calc(100vw / 2));
+  }
+  50% {
+    transform: translateX(calc(100vw / 2));
+  }
+  60% {
+    transform: translateX(calc(100vw / 2));
+  }
+  70% {
+    transform: translateX(calc(100vw / 2));
+  }
+  80% {
+    transform: translateX(calc(100vw / 2));
+  }
+  90% {
+    transform: translateX(calc(100vw / 2));
+  }
+  100% {
+    transform: translateX(calc(100vw / 2));
+  }
+}
+
+.scene {
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 4px;
+  -webkit-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  -moz-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 4px;
+  color: black;
+  font-size: 20px;
+  -webkit-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  -moz-box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+  box-shadow: 10px 10px 44px -12px rgba(112, 111, 112, 1);
+}
+
+.box.rotate_x {
+    animation: rotateX 1500ms infinite alternate ease-in-out 1000ms;
+}
+
+.box.rotate_y {
+    animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
+}
+
+.box.rotate_x {
+    background-color: bisque;
+}
+
+.box.rotate_y {
+    background-color: teal;
+}
+
+@keyframes rotateX {
+    0% {
+        transform: perspective(400px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(400px) rotateX(360deg);
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: perspective(400px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
